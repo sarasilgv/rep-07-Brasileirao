@@ -1,0 +1,20 @@
+let
+    Fonte = List.Dates(#date(2003,1,1),7665,#duration(1,0,0,0)),
+    #"Convertido para Tabela" = Table.FromList(Fonte, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Convertido para Tabela",{{"Column1", type date}}),
+    #"Dia Inserido" = Table.AddColumn(#"Tipo Alterado", "Dia", each Date.Day([Column1]), type text),
+    #"Mês Inserido" = Table.AddColumn(#"Dia Inserido", "Mês", each Date.Month([Column1]), type text),
+    #"Nome do Mês Inserido" = Table.AddColumn(#"Mês Inserido", "Nome do Mês", each Date.MonthName([Column1]), type text),
+    #"Dia da Semana Inserido" = Table.AddColumn(#"Nome do Mês Inserido", "Dia da Semana", each Date.DayOfWeek([Column1]), type text),
+    #"Semana do Mês Inserida" = Table.AddColumn(#"Dia da Semana Inserido", "Semana do Mês", each Date.WeekOfMonth([Column1]), type text),
+    #"Trimestre Inserido" = Table.AddColumn(#"Semana do Mês Inserida", "Trimestre", each Date.QuarterOfYear([Column1]), type text),
+    #"Coluna Mesclada Inserida" = Table.AddColumn(#"Trimestre Inserido", "Nome do Trimestre", each Text.Combine({"Q", Text.From([Trimestre], "pt-BR")}), type text),
+    #"Colunas Renomeadas" = Table.RenameColumns(#"Coluna Mesclada Inserida",{{"Column1", "Data"}}),
+    #"Nome do Dia Inserido" = Table.AddColumn(#"Colunas Renomeadas", "Nome do Dia", each Date.DayOfWeekName([Data]), type text),
+    #"Colunas Reordenadas" = Table.ReorderColumns(#"Nome do Dia Inserido",{"Data", "Dia", "Nome do Dia", "Dia da Semana", "Mês", "Nome do Mês", "Semana do Mês", "Trimestre", "Nome do Trimestre"}),
+    #"Colocar Cada Palavra Em Maiúscula" = Table.TransformColumns(#"Colunas Reordenadas",{{"Nome do Dia", Text.Proper, type text},{"Nome do Mês", Text.Proper, type text}}),
+    #"Linhas Filtradas" = Table.SelectRows(#"Colocar Cada Palavra Em Maiúscula", each true),
+    #"Ano Inserido" = Table.AddColumn(#"Linhas Filtradas", "Ano", each Date.Year([Data]), type text),
+    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Ano Inserido",{{"Ano", type text},{"Dia", type text},{"Dia da Semana", type text},{"Mês", type text},{"Semana do Mês", type text},{"Trimestre", type text}})
+in
+    #"Tipo Alterado1"

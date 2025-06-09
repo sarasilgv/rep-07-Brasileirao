@@ -1,0 +1,46 @@
+****Objetivos do Desafio
+Usar suas habilidades no Power BI para transformar dados do Campeonato Brasileiro em um dashboard analítico que conte histórias relevantes sobre o futebol nacional, demonstrando sua capacidade de análise e visualização de dados!
+
+
+
+****Dados Disponíveis
+Neste desafio, você terá acesso a uma base de dados completa com 20 anos de história do Brasileirão (2003-2023). É a oportunidade perfeita para criar visualizações, descobrir padrões e extrair insights que nem mesmo os comentaristas esportivos da TV sabiam! 📺
+
+
+
+****Análises Recomendadas/Sugeridas
+
+
+⚽ Análises gerais:
+Ranking de vitórias por equipe
+Quantidade de gols por ano
+Ranking de chutes a gol
+Jogadores que mais marcaram gols por edição
+Aproveitamento das equipes como mandate ou visitante (influência do fator "casa")
+
+
+⚽ Análises disciplinares:
+Ranking de jogadores mais indisciplinados
+Ranking de cartões amarelos e vermelhos por equipe
+Frequência de cartões por temporada
+Relação entre desempenho e disciplina
+Tendência disciplinar das equipes ao longo dos anos
+
+
+⚽ Análises históricas e geográficas:
+Ranking de partidas disputadas por jogador e por equipe
+Como eventos históricos ou tendências culturais podem ter influenciado os números em cada época
+Cidades com mais partidas disputadas
+Este é um guia de possíveis análises sugeridas e elas não são obrigatórias. Fique à vontade para ser criativo(a) e analisar como desejar. O céu é o limite!
+
+
+
+****Critérios para determinar os vencedores
+Serão avaliadas todas as características que determinam uma boa análise de dados, incluindo mas não se limitando a:
+
+Tratamento de dados no Power Query (conhecimento em ETL)
+Enriquecimento da base de dados com novos dados (curiosidade e proatividade)***
+Modelagem de dados (estaremos de olho em relacionamentos muitos para muitos)
+Indicadores e cálculos no DAX (as medidas criadas serão abertas e avaliadas)***
+Storytelling (dados com gráficos bem escolhidos e com uma sequência analítica interessante)
+Dataviz (capriche no visual do dashboard, usando cores, layout, imagens e o que for necessário para caprichar no design)

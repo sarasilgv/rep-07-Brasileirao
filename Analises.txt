@@ -1,0 +1,100 @@
+------------------------------------------Análises GPT:------------------------------------------
+_________________________________________________________________________________________________
+
+📂 1. campeonato-brasileiro-cartoes.csv
+Colunas: partida_id, rodata, clube, cartao, atleta, num_camisa, posicao, minuto
+
+Análises possíveis:
+
+Quantidade de cartões por clube, jogador ou posição
+
+Distribuição de cartões por tempo de jogo
+
+Comparativo entre cartões amarelos e vermelhos
+
+Jogadores mais indisciplinados
+
+Tendência de cartões por rodada
+
+📂 2. campeonato-brasileiro-estatisticas-full.csv
+Colunas: partida_id, rodata, clube, chutes, chutes_no_alvo, posse_de_bola, passes, precisao_passes, faltas, cartao_amarelo, cartao_vermelho, impedimentos, escanteios
+
+Análises possíveis:
+
+Desempenho ofensivo e defensivo por clube (ex: chutes x posse de bola)
+
+Comparação de eficiência: chutes no alvo vs. total de chutes
+
+Volume de faltas e cartões por time
+
+Eficiência de passes
+
+Estratégia de jogo: posse vs. escanteios vs. passes
+
+📂 3. campeonato-brasileiro-full.csv
+Colunas: ID, rodata, data, hora, mandante, visitante, formacao_mandante, formacao_visitante, tecnico_mandante, tecnico_visitante, vencedor, arena, mandante_Placar, visitante_Placar, mandante_Estado, visitante_Estado
+
+Análises possíveis:
+
+Resultados e placares por time, estado ou arena
+
+Desempenho de mandantes vs. visitantes
+
+Evolução de vitórias por rodada
+
+Técnicos mais vitoriosos
+
+Jogos mais goleadores
+
+Média de gols por rodada ou por time
+
+📂 4. campeonato-brasileiro-gols.csv
+Colunas: partida_id, rodata, clube, atleta, minuto, tipo_de_gol
+
+Análises possíveis:
+
+Artilheiros do campeonato
+
+Gol por tipo (normal, pênalti, contra)
+
+Distribuição dos gols por tempo de jogo
+
+Gols por time
+
+Gols por rodada
+
+🔀 Análises entre bases (integrações possíveis)
+
+📌 cartões + partidas
+Comparar número de cartões com o resultado da partida
+
+Ver se times mais agressivos (mais cartões) vencem mais ou menos
+
+Tendência de cartões por estádio ou por estado
+
+📌 estatísticas + partidas
+Cruzar posse de bola ou chutes com o vencedor: "Domínio x Resultado"
+
+Relação entre passes e resultado final
+
+Time mais eficiente (menor posse, maior placar)
+
+📌 gols + partidas
+Cruzar tipo de gol com o resultado
+
+Gols por jogador e impacto no resultado da partida
+
+Comparar jogos com mais gols com estatísticas do jogo (como chutes e posse)
+
+📌 gols + estatísticas
+Relação entre chutes no alvo e gols feitos
+
+Eficiência ofensiva por time
+
+Comparar precisão de passes com número de gols
+
+📌 cartões + estatísticas
+Ver se mais faltas resultam em mais cartões
+
+Relacionar número de cartões com posse de bola ou chutes
+
